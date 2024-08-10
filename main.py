@@ -114,11 +114,8 @@ with tab1:
 
         if messge_type_input == 'Paragraph':
             if chain_choice_input == 'map-reduce':
-                 sum1 = map_reduce_paragraph(docs, llm3)
-                if model_choice_input == 'gpt-4o':
-                    sum1 = map_reduce_paragraph(docs, llm3)
-                elif model_choice_input == 'gpt-4-1106-preview':
-                    sum1 = map_reduce_paragraph(docs, llm4)
+                sum1 = map_reduce_paragraph(docs, llm3)
+
             elif chain_choice_input == 'refine':
                  sum1 = map_reduce_paragraph(docs, llm3)
 
