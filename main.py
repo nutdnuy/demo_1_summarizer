@@ -117,21 +117,19 @@ with tab1:
                 sum1 = map_reduce_paragraph(docs, llm3)
 
             elif chain_choice_input == 'refine':
-                 sum1 = map_reduce_paragraph(docs, llm3)
+                sum1 = map_reduce_paragraph(docs, llm3)
 
         if messge_type_input == 'Bullet Points':
             if chain_choice_input == 'map-reduce':
-                 sum1 = map_reduce_paragraph(docs, llm3)
+                sum1 = map_reduce_paragraph(docs, llm3)
     
             elif chain_choice_input == 'refine':
-                 sum1 = map_reduce_paragraph(docs, llm3)
+                sum1 = map_reduce_paragraph(docs, llm3)
        
 
         # Translate the summarize
-        if (model_choice_input == 'gpt-3.5-turbo-1106'):
-            sum2 = translate_to_thai(sum1, llm3)
-        elif (model_choice_input == 'gpt-4-1106-preview'):
-            sum2 = translate_to_thai(sum1, llm4)
+        sum2 = translate_to_thai(sum1, llm3)
+
 
         st.success(sum1)
         st.success(sum2)
