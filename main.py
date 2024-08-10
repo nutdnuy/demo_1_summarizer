@@ -126,7 +126,7 @@ with tab1:
 
         if messge_type_input == 'Bullet Points':
             if chain_choice_input == 'map-reduce':
-                if model_choice_input == 'gpt-3.5-turbo-1106':
+                if model_choice_input == 'gpt-4o':
                     sum1 = map_reduce_bullet(docs, llm3)
                 elif model_choice_input == 'gpt-4-1106-preview':
                     sum1 = map_reduce_bullet(docs, llm4)
