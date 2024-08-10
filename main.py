@@ -33,7 +33,7 @@ if api_key_input:
     openai.api_key = os.environ['OPENAI_API_KEY']
     llm3 = ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo-1106")
     llm4 = ChatOpenAI(temperature=0, model_name="gpt-4-1106-preview")
-    st.sidebar.success(f"✅ API: **{api_key_input}**")
+   # st.sidebar.success(f"✅ API: **{api_key_input}**")
 else:
     st.sidebar.warning("Please enter your API key to proceed.")
 
