@@ -33,8 +33,12 @@ else:
 
 # Model choice
 st.sidebar.title("Choose model")
-model_choice_input = st.sidebar.radio("*Note: GPT-4 will charge more credits.*",
-                                      ('gpt-3.5-turbo-1106', 'gpt-4-1106-preview'))
+
+
+model_choice_input ="GPT-4o"
+
+
+
 if model_choice_input:
     st.sidebar.success(f"✅ Model: **{model_choice_input}**")
 
