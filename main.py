@@ -179,29 +179,41 @@ with tab2:
             time.sleep(0.1)
             progress_bar.progress(percent_complete + 1)
 
-        docs = pdf_loader(temp_pdf_path)
+        docs = word_loader(temp_docx_path)
 
         if messge_type_input == 'Paragraph':
             if chain_choice_input == 'map-reduce':
-                sum1 = map_reduce_paragraph(docs, llm3)
-
+                if model_choice_input == 'gpt-3.5-turbo-1106':
+                    sum1 = map_reduce_paragraph(docs, llm3)
+                elif model_choice_input == 'gpt-4-1106-preview':
+                    sum1 = map_reduce_paragraph(docs, llm4)
             elif chain_choice_input == 'refine':
-                sum1 = map_reduce_paragraph(docs, llm3)
+                if model_choice_input == 'gpt-3.5-turbo-1106':
+                    sum1 = refine_paragraph(docs, llm3)
+                elif model_choice_input == 'gpt-4-1106-preview':
+                    sum1 = refine_paragraph(docs, llm4)
 
         if messge_type_input == 'Bullet Points':
             if chain_choice_input == 'map-reduce':
-                sum1 = map_reduce_paragraph(docs, llm3)
-    
+                if model_choice_input == 'gpt-3.5-turbo-1106':
+                    sum1 = map_reduce_bullet(docs, llm3)
+                elif model_choice_input == 'gpt-4-1106-preview':
+                    sum1 = map_reduce_bullet(docs, llm4)
             elif chain_choice_input == 'refine':
-                sum1 = map_reduce_paragraph(docs, llm3)
-       
+                if model_choice_input == 'gpt-3.5-turbo-1106':
+                    sum1 = refine_bullet(docs, llm3)
+                elif model_choice_input == 'gpt-4-1106-preview':
+                    sum1 = refine_bullet(docs, llm4)                
 
         # Translate the summarize
-        sum2 = translate_to_thai(sum1, llm3)
-
+        if (model_choice_input == 'gpt-3.5-turbo-1106'):
+            sum2 = translate_to_thai(sum1, llm3)
+        elif (model_choice_input == 'gpt-4-1106-preview'):
+            sum2 = translate_to_thai(sum1, llm4)
 
         st.success(sum1)
         st.success(sum2)
+
 ########################## Tab 3 ##########################
         
 with tab3:
@@ -246,29 +258,41 @@ with tab3:
             time.sleep(0.1)
             progress_bar.progress(percent_complete + 1)
 
-        docs = pdf_loader(temp_pdf_path)
+        docs = powerpoint_loader(temp_pptx_path)
 
         if messge_type_input == 'Paragraph':
             if chain_choice_input == 'map-reduce':
-                sum1 = map_reduce_paragraph(docs, llm3)
-
+                if model_choice_input == 'gpt-3.5-turbo-1106':
+                    sum1 = map_reduce_paragraph(docs, llm3)
+                elif model_choice_input == 'gpt-4-1106-preview':
+                    sum1 = map_reduce_paragraph(docs, llm4)
             elif chain_choice_input == 'refine':
-                sum1 = map_reduce_paragraph(docs, llm3)
+                if model_choice_input == 'gpt-3.5-turbo-1106':
+                    sum1 = refine_paragraph(docs, llm3)
+                elif model_choice_input == 'gpt-4-1106-preview':
+                    sum1 = refine_paragraph(docs, llm4)
 
         if messge_type_input == 'Bullet Points':
             if chain_choice_input == 'map-reduce':
-                sum1 = map_reduce_paragraph(docs, llm3)
-    
+                if model_choice_input == 'gpt-3.5-turbo-1106':
+                    sum1 = map_reduce_bullet(docs, llm3)
+                elif model_choice_input == 'gpt-4-1106-preview':
+                    sum1 = map_reduce_bullet(docs, llm4)
             elif chain_choice_input == 'refine':
-                sum1 = map_reduce_paragraph(docs, llm3)
-       
+                if model_choice_input == 'gpt-3.5-turbo-1106':
+                    sum1 = refine_bullet(docs, llm3)
+                elif model_choice_input == 'gpt-4-1106-preview':
+                    sum1 = refine_bullet(docs, llm4)
 
         # Translate the summarize
-        sum2 = translate_to_thai(sum1, llm3)
-
+        if (model_choice_input == 'gpt-3.5-turbo-1106'):
+            sum2 = translate_to_thai(sum1, llm3)
+        elif (model_choice_input == 'gpt-4-1106-preview'):
+            sum2 = translate_to_thai(sum1, llm4)
 
         st.success(sum1)
         st.success(sum2)
+
 
 ########################## Tab 4 ##########################
         
@@ -304,26 +328,37 @@ with tab4:
             time.sleep(0.1)
             progress_bar.progress(percent_complete + 1)
 
-        docs = pdf_loader(temp_pdf_path)
+        docs = web_loader(web_input)
 
         if messge_type_input == 'Paragraph':
             if chain_choice_input == 'map-reduce':
-                sum1 = map_reduce_paragraph(docs, llm3)
-
+                if model_choice_input == 'gpt-3.5-turbo-1106':
+                    sum1 = map_reduce_paragraph(docs, llm3)
+                elif model_choice_input == 'gpt-4-1106-preview':
+                    sum1 = map_reduce_paragraph(docs, llm4)
             elif chain_choice_input == 'refine':
-                sum1 = map_reduce_paragraph(docs, llm3)
+                if model_choice_input == 'gpt-3.5-turbo-1106':
+                    sum1 = refine_paragraph(docs, llm3)
+                elif model_choice_input == 'gpt-4-1106-preview':
+                    sum1 = refine_paragraph(docs, llm4)
 
         if messge_type_input == 'Bullet Points':
             if chain_choice_input == 'map-reduce':
-                sum1 = map_reduce_paragraph(docs, llm3)
-    
+                if model_choice_input == 'gpt-3.5-turbo-1106':
+                    sum1 = map_reduce_bullet(docs, llm3)
+                elif model_choice_input == 'gpt-4-1106-preview':
+                    sum1 = map_reduce_bullet(docs, llm4)
             elif chain_choice_input == 'refine':
-                sum1 = map_reduce_paragraph(docs, llm3)
-       
+                if model_choice_input == 'gpt-3.5-turbo-1106':
+                    sum1 = refine_bullet(docs, llm3)
+                elif model_choice_input == 'gpt-4-1106-preview':
+                    sum1 = refine_bullet(docs, llm4)                
 
         # Translate the summarize
-        sum2 = translate_to_thai(sum1, llm3)
-
+        if (model_choice_input == 'gpt-3.5-turbo-1106'):
+            sum2 = translate_to_thai(sum1, llm3)
+        elif (model_choice_input == 'gpt-4-1106-preview'):
+            sum2 = translate_to_thai(sum1, llm4)
 
         st.success(sum1)
         st.success(sum2)
@@ -362,26 +397,37 @@ with tab5:
             time.sleep(0.1)
             progress_bar.progress(percent_complete + 1)
 
-        docs = pdf_loader(temp_pdf_path)
+        docs = youtube_loader(yt_input)
 
         if messge_type_input == 'Paragraph':
             if chain_choice_input == 'map-reduce':
-                sum1 = map_reduce_paragraph(docs, llm3)
-
+                if model_choice_input == 'gpt-3.5-turbo-1106':
+                    sum1 = map_reduce_paragraph(docs, llm3)
+                elif model_choice_input == 'gpt-4-1106-preview':
+                    sum1 = map_reduce_paragraph(docs, llm4)
             elif chain_choice_input == 'refine':
-                sum1 = map_reduce_paragraph(docs, llm3)
+                if model_choice_input == 'gpt-3.5-turbo-1106':
+                    sum1 = refine_paragraph(docs, llm3)
+                elif model_choice_input == 'gpt-4-1106-preview':
+                    sum1 = refine_paragraph(docs, llm4)        
 
         if messge_type_input == 'Bullet Points':
             if chain_choice_input == 'map-reduce':
-                sum1 = map_reduce_paragraph(docs, llm3)
-    
+                if model_choice_input == 'gpt-3.5-turbo-1106':
+                    sum1 = map_reduce_bullet(docs, llm3)
+                elif model_choice_input == 'gpt-4-1106-preview':
+                    sum1 = map_reduce_bullet(docs, llm4)
             elif chain_choice_input == 'refine':
-                sum1 = map_reduce_paragraph(docs, llm3)
-       
+                if model_choice_input == 'gpt-3.5-turbo-1106':
+                    sum1 = refine_bullet(docs, llm3)
+                elif model_choice_input == 'gpt-4-1106-preview':
+                    sum1 = refine_bullet(docs, llm4)
 
         # Translate the summarize
-        sum2 = translate_to_thai(sum1, llm3)
-
+        if (model_choice_input == 'gpt-3.5-turbo-1106'):
+            sum2 = translate_to_thai(sum1, llm3)
+        elif (model_choice_input == 'gpt-4-1106-preview'):
+            sum2 = translate_to_thai(sum1, llm4)
 
         st.success(sum1)
         st.success(sum2)
