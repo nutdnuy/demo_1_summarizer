@@ -20,8 +20,14 @@ import time
 # Set API keys
 st.sidebar.title("Set API keys")
 
-# API key input with a key
-api_key_input = st.sidebar.text_input('*Note: Enter only OpenAI API key.*')
+
+# use dotenv to load environment variables
+from dotenv import load_dotenv
+load_dotenv()
+api_key_input  = os.getenv("OPENAI_API_KEY")
+
+
+
 if api_key_input:
     os.environ["OPENAI_API_KEY"] = api_key_input
     openai.api_key = os.environ['OPENAI_API_KEY']
