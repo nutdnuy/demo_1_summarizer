@@ -172,7 +172,7 @@ with tab2:
     st.markdown("---")
 
     # Process
-    if st.button("Execute!", key='done_1'):
+    if st.button("Execute!", key='done_2'):
         st.text("Processing your selections... Please wait.")
         progress_bar = st.progress(0)
         for percent_complete in range(100):
@@ -239,7 +239,7 @@ with tab3:
     st.markdown("---")
 
     # Process
-    if st.button("Execute!", key='done_1'):
+    if st.button("Execute!", key='done_3'):
         st.text("Processing your selections... Please wait.")
         progress_bar = st.progress(0)
         for percent_complete in range(100):
@@ -297,7 +297,7 @@ with tab4:
     st.markdown("---")
 
     # Process
-    if st.button("Execute!", key='done_1'):
+    if st.button("Execute!", key='done_4'):
         st.text("Processing your selections... Please wait.")
         progress_bar = st.progress(0)
         for percent_complete in range(100):
@@ -355,7 +355,7 @@ with tab5:
     st.markdown("---")
 
     # Process
-    if st.button("Execute!", key='done_1'):
+    if st.button("Execute!", key='done_5'):
         st.text("Processing your selections... Please wait.")
         progress_bar = st.progress(0)
         for percent_complete in range(100):
