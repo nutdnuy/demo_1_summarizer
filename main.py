@@ -31,8 +31,8 @@ api_key_input  = os.getenv("OPENAI_API_KEY")
 if api_key_input:
     os.environ["OPENAI_API_KEY"] = api_key_input
     openai.api_key = os.environ['OPENAI_API_KEY']
-    llm3 = ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo-1106")
-    llm4 = ChatOpenAI(temperature=0, model_name="gpt-4-1106-preview")
+    llm3 = ChatOpenAI(temperature=0, model_name="gpt-4o")
+    llm4 = ChatOpenAI(temperature=0, model_name="gpt-4o")
    # st.sidebar.success(f"✅ API: **{api_key_input}**")
 else:
     st.sidebar.warning("Please enter your API key to proceed.")
@@ -114,7 +114,7 @@ with tab1:
 
         if messge_type_input == 'Paragraph':
             if chain_choice_input == 'map-reduce':
-                if model_choice_input == 'gpt-3.5-turbo-1106':
+                if model_choice_input == 'gpt-4o':
                     sum1 = map_reduce_paragraph(docs, llm3)
                 elif model_choice_input == 'gpt-4-1106-preview':
                     sum1 = map_reduce_paragraph(docs, llm4)
